@@ -11,3 +11,4 @@ Add _vimrc /home/dotfiles/
 Run cd / &&  ln -s /home/dotfiles/_vimrc .vimrc
 Run mkdir -p /.vim/bundle
 Run git clone https://github.com/Shougo/neobundle.vim /.vim/bundle/neobundle.vim
+Run vim -u /.vimrc -i NONE -c "try | NeoBundleUpdate! | finally | q! | endtry" -e -s -V1
