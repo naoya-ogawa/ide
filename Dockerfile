@@ -12,4 +12,3 @@ Add update.sh /home/dotfiles/update.sh
 Run cd / &&  ln -s /home/dotfiles/_vimrc .vimrc
 Run mkdir -p /.vim/bundle
 Run git clone https://github.com/Shougo/neobundle.vim /.vim/bundle/neobundle.vim
-Run cd /home/dotfiles/ && ./update.sh
