@@ -2,4 +2,6 @@ FROM centos:latest
 MAINTAINER original <test@example.com>
 
 Run yum -y install vim
-Add _vimrc /
+Run mkdir /home/dotfiles
+Add _vimrc /home/dotfiles
+Run ln -s /homde/dotfiles/_vimrc /.vimrc
