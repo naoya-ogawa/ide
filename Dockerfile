@@ -8,7 +8,8 @@ ENV LC_ALL ja_JP.UTF-8
 Run yum -y install vim && yum -y install git
 Run mkdir /home/dotfiles
 Add _vimrc /home/dotfiles/
-Add update.sh /home/dotfiles/update.sh
+Add update.sh /home/dotfiles/
 Run cd / &&  ln -s /home/dotfiles/_vimrc .vimrc
 Run mkdir -p /.vim/bundle
 Run git clone https://github.com/Shougo/neobundle.vim /.vim/bundle/neobundle.vim
+Run cd /home/dotfiles/ && ./update.sh
