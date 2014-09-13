@@ -1,10 +1,10 @@
 FROM centos:latest
 MAINTAINER original <test@example.com>
 
-Run localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
-ENV LC_ALL en_US.UTF-8
+Run localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP:ja
+ENV LC_ALL ja_JP.UTF-8
 Run yum -y install vim && yum -y install git
 Run mkdir /home/dotfiles
 Add _vimrc /home/dotfiles/
