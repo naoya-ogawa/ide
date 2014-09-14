@@ -9,5 +9,6 @@ ENV LC_ALL ja_JP.UTF-8
 Run yum -y install vim && yum -y install git && yum -y install go
 Run cd /home/ && git clone https://github.com/naoya-ogawa/ide.git
 Run cd / &&  ln -s /home/ide/_vimrc .vimrc 
-Run mkdir -p /.vim/bundle && git clone https://github.com/Shougo/neobundle.vim /.vim/bundle/neobundle.vim && cp /home/ide/_bashrc /.bashrc && cd /home/ide/ && ./update.sh
+Run mkdir -p /.vim/bundle && git clone https://github.com/Shougo/neobundle.vim /.vim/bundle/neobundle.vim
+Run cp /home/ide/_bashrc /.bashrc && cd /home/ide/ && ./update.sh
 
