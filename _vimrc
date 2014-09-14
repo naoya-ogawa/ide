@@ -4,6 +4,7 @@ nnoremap <f2> :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-qu
 nnoremap <f3> :source ~/.vimrc<CR>
 noremap <CR> o<ESC>
 noremap <c-j> :!
+nmap <F8> :TagbarToggle<CR>
 
 set lines=35
 set columns=150
@@ -70,5 +71,7 @@ NeoBundle 'bling/vim-airline'
 
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 NeoBundle 'Shougo/vimfiler'
+
+NeoBundle 'majutsushi/tagbar'
 
 filetype plugin indent on
