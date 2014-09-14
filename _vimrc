@@ -1,5 +1,6 @@
 "######ショートカット設定######
-nnoremap <f2> :NERDTreeToggle<CR>
+"nnoremap <f2> :NERDTreeToggle<CR>
+nnoremap <f2> :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-quit<Cr>
 nnoremap <f3> :source ~/.vimrc<CR>
 noremap <CR> o<ESC>
 noremap <c-j> :!
@@ -38,6 +39,10 @@ if $GOROOT != ''
     filetype plugin indent on
     syntax on
     autocmd FileType go autocmd BufWritePre <buffer> Fmt
+    au FileType go setlocal sw=4 ts=4 sts=4 noet
+    " :make :copen の設定
+    au FileType go setlocal makeprg=go\ build\ ./... errorformat=%f:%l:\ %m
+    
     exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
     set completeopt=menu,preview
 
@@ -60,9 +65,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 
-NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'bling/vim-airline'
 
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
+NeoBundle 'Shougo/vimfiler'
 
 filetype plugin indent on
