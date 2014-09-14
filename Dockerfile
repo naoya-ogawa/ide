@@ -6,13 +6,7 @@ ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
 ENV LC_ALL ja_JP.UTF-8
 
-Run yum -y install vim && yum -y install git &&  mkdir /home/dotfiles && yum -y install go
+Run yum -y install vim && yum -y install git && yum -y install go
+Run cd /home/ && git clone https://github.com/naoya-ogawa/ide.git
+Run cd / &&  ln -s /home/ide/_vimrc .vimrc &&  mkdir -p /.vim/bundle && git clone https://github.com/Shougo/neobundle.vim /.vim/bundle/neobundle.vim && mv /home/ide/_bashrc /.bashrc && cd /home/ide/ && ./update.sh
 
-Add _vimrc /home/dotfiles/
-Add update.sh /home/dotfiles/
-Run cd / &&  ln -s /home/dotfiles/_vimrc .vimrc &&  mkdir -p /.vim/bundle && git clone https://github.com/Shougo/neobundle.vim /.vim/bundle/neobundle.vim
-#Run cd /home/dotfiles/ && ./update.sh
-Add _bashrc /
-Run cd / && mv _bashrc .bashrc
-
-Run cd /home/dotfiles/ && ./update.sh
