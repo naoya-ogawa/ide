@@ -13,4 +13,9 @@ export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 
 go get github.com/nsf/gocode
+go get -v code.google.com/p/rog-go/exp/cmd/godef
+go install -v code.google.com/p/rog-go/exp/cmd/godef
+
+go get github.com/jstemmer/gotags
+
 echo ''
