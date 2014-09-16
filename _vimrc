@@ -6,6 +6,9 @@ noremap <CR> o<ESC>
 noremap <c-j> :!
 nmap <F8> :TagbarToggle<CR>
 
+nnoremap 2 :VimFiler<CR>
+nnoremap 3 :source ~/.vimrc<CR>
+
 set lines=35
 set columns=150
 
@@ -62,7 +65,6 @@ if has('vim_starting')
 endif 
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 
@@ -73,5 +75,16 @@ NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 NeoBundle 'Shougo/vimfiler'
 
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+\ }
+
+
+
 
 filetype plugin indent on
