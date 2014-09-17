@@ -9,7 +9,7 @@ nmap <F8> :TagbarToggle<CR>
 
 nnoremap 2 :VimFiler<CR>
 nnoremap 3 :source ~/.vimrc<CR>
-nnoremap 5 :lcd %:h<CR>:! go test % 
+nnoremap 5 :lcd %:h<CR>:! go test 
 nnoremap 7 :UniteBookmarkAdd<CR>
 nnoremap 8 :Unite bookmark<CR>
 
