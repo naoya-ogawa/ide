@@ -6,19 +6,19 @@ noremap <CR> o<ESC>
 noremap <c-j> :!
 nmap <F8> :TagbarToggle<CR>
 
+nnoremap " :VimFiler<CR>
+nnoremap # :source ~/.vimrc<CR>
+nnoremap % :lcd %:h<CR>:! go test 
+nnoremap ' :UniteBookmarkAdd<CR>
+nnoremap ( :Unite bookmark<CR>
 
-nnoremap 2 :VimFiler<CR>
-nnoremap 3 :source ~/.vimrc<CR>
-nnoremap 5 :lcd %:h<CR>:! go test 
-nnoremap 7 :UniteBookmarkAdd<CR>
-nnoremap 8 :Unite bookmark<CR>
-
+"####オムニ補完#######
 inoremap <c-a> <c-x><c-o>
 
 set lines=35
 set columns=150
 
-set autochdir
+let g:vimfiler_enable_auto_cd = 1
 
 "######表示設定#######
 set encoding=utf-8 " エンコ固定
