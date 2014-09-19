@@ -6,11 +6,18 @@ noremap <CR> o<ESC>
 noremap <c-j> :!
 nmap <F8> :TagbarToggle<CR>
 
+"Shift+2
 nnoremap " :VimFiler<CR>
+"Shift+3
 nnoremap # :source ~/.vimrc<CR>
+"Shift+5
 nnoremap % :lcd %:h<CR>:! go test 
+"Shift+7
 nnoremap ' :UniteBookmarkAdd<CR>
+"Shift+8
 nnoremap ( :Unite bookmark<CR>
+
+
 
 "####オムニ補完#######
 inoremap <c-a> <c-x><c-o>
