@@ -40,6 +40,10 @@ set autoindent
 set expandtab
 set shiftwidth=4
 
+"####自動改行無効###
+:setlocal formatoptions-=r
+:setlocal formatoptions-=o
+
 "#####検索設定######
 set ignorecase "大文字/小文字の区別なく検索する
 set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
@@ -97,7 +101,9 @@ NeoBundle 'Shougo/vimproc', {
   \ },
 \ }
 
-
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
 
 
 filetype plugin indent on
