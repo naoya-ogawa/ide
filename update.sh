@@ -18,4 +18,6 @@ go install -v code.google.com/p/rog-go/exp/cmd/godef
 
 go get github.com/jstemmer/gotags
 
+ln -s /.cache/.NERDTreeBookmarks /.NERDTreeBookmarks
+
 echo ''
