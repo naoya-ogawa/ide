@@ -1,6 +1,6 @@
 "######ショートカット設定######
-"nnoremap <f2> :NERDTreeToggle<CR>
-nnoremap <f2> :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-quit<Cr>
+nnoremap <f2> :NERDTreeToggle<CR>
+"nnoremap <f2> :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-quit<Cr>
 nnoremap <f3> :source ~/.vimrc<CR>
 noremap <CR> o<ESC>
 noremap <c-j> :!
@@ -28,7 +28,9 @@ set columns=150
 let g:vimfiler_enable_auto_cd = 1
 
 "######表示設定#######
-set encoding=utf-8 " エンコ固定
+if !has('wind32')
+    set encoding=utf-8 " エンコ固定
+endif
 set number "行番号表示
 set title "編集中のファイル名を表示
 set showmatch "括弧入力時の対応する括弧を表示
@@ -85,21 +87,23 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 
-"NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'bling/vim-airline'
 
 NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'dgryski/vim-godef'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-    \ 'windows' : 'make -f make_mingw32.mak',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-  \ },
-\ }
+if !has('win32')
+    NeoBundle 'Shougo/vimproc', {
+                \ 'build' : {
+                \ 'windows' : 'make -f make_mingw32.mak',
+                \ 'cygwin' : 'make -f make_cygwin.mak',
+                \ 'mac' : 'make -f make_mac.mak',
+                \ 'unix' : 'make -f make_unix.mak',
+                \ },
+                \ }
+endif
 
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
