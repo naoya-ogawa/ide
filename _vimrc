@@ -26,6 +26,8 @@ set lines=35
 set columns=150
 
 let g:vimfiler_enable_auto_cd = 1
+let NERDTreeChDirMode=2
+
 
 "######表示設定#######
 if !has('wind32')
