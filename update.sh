@@ -1,6 +1,8 @@
 #!/bin/sh
 #vim -u ~/.vimrc -i NONE -c "try | NeoBundleUpdate! | finally | q! | endtry" -e -s -V1
-vim +":NeoBundleInstall" +:q
+#vim +":NeoBundleInstall" +:q
+/.vim/bundle/neobundle.vim/bin/neoinstall
+
 
 cd /home
 #git clone https://github.com/naoya-ogawa/ide.git
