@@ -21,7 +21,7 @@ go get github.com/jstemmer/gotags
 
 ln -s /.cache/.NERDTreeBookmarks /.NERDTreeBookmarks
 
-export HOME=$HOME:/
+export HOME=/
 
 cd /
 
