@@ -17,7 +17,16 @@ nnoremap ' :UniteBookmarkAdd<CR>
 "Shift+8
 nnoremap ( :Unite bookmark<CR>
 
-
+" lhs comments
+vmap ,# :s/^/#/<CR>:nohlsearch<CR>
+vmap ,/ :s/^/\/\//<CR>:nohlsearch<CR>
+vmap ,> :s/^/> /<CR>:nohlsearch<CR>
+vmap ," :s/^/\"/<CR>:nohlsearch<CR>
+vmap ,% :s/^/%/<CR>:nohlsearch<CR>
+vmap ,! :s/^/!/<CR>:nohlsearch<CR>
+vmap ,; :s/^/;/<CR>:nohlsearch<CR>
+vmap ,- :s/^/--/<CR>:nohlsearch<CR>
+vmap ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>:nohlsearch<CR>
 
 "####オムニ補完#######
 inoremap <c-a> <c-x><c-o>
