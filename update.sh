@@ -1,8 +1,6 @@
 #!/bin/sh
 #vim -u ~/.vimrc -i NONE -c "try | NeoBundleUpdate! | finally | q! | endtry" -e -s -V1
 #vim +":NeoBundleInstall" +:q
-/.vim/bundle/neobundle.vim/bin/neoinstall
-
 
 cd /home
 #git clone https://github.com/naoya-ogawa/ide.git
@@ -22,5 +20,12 @@ go install -v code.google.com/p/rog-go/exp/cmd/godef
 go get github.com/jstemmer/gotags
 
 ln -s /.cache/.NERDTreeBookmarks /.NERDTreeBookmarks
+
+export HOME=$HOME:/
+
+cd /
+
+/.vim/bundle/neobundle.vim/bin/neoinstall
+
 
 echo ''
