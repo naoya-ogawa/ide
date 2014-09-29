@@ -2,9 +2,18 @@
 nnoremap <f2> :NERDTreeToggle<CR>
 "nnoremap <f2> :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-quit<Cr>
 nnoremap <f3> :source ~/.vimrc<CR>
-"noremap <CR> o<ESC>
-imap <c-j> <esc>
+
 nmap <F8> :TagbarToggle<CR>
+
+
+
+imap <c-j> <esc>
+imap <c-k> <CR>
+imap <c-h> <bs>
+
+cnoremap <c-j> <esc>
+cnoremap <c-k> <CR>
+cnoremap <c-h> <bs>
 
 
 "キーの入替え
