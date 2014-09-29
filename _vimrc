@@ -3,8 +3,24 @@ nnoremap <f2> :NERDTreeToggle<CR>
 "nnoremap <f2> :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-quit<Cr>
 nnoremap <f3> :source ~/.vimrc<CR>
 "noremap <CR> o<ESC>
-noremap <c-j> :!
+imap <c-j> <esc>
 nmap <F8> :TagbarToggle<CR>
+
+
+"キーの入替え
+nnoremap ; :
+nnoremap : ;
+
+"実行キーの切替
+nnoremap s :!
+
+"ウィンドウ移動
+nnoremap <space>w <c-w>w
+nnoremap <space>j <c-w>j
+nnoremap <space>k <c-w>k
+nnoremap <space>i <c-w>i
+nnoremap <space>l <c-w>l
+
 
 "Shift+2
 nnoremap " :VimFiler<CR>
