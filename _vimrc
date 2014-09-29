@@ -5,16 +5,12 @@ nnoremap <f3> :source ~/.vimrc<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
-
-
 imap <c-j> <esc>
 imap <c-k> <CR>
 imap <c-h> <bs>
 
-cnoremap <c-j> <esc>
 cnoremap <c-k> <CR>
 cnoremap <c-h> <bs>
-
 
 "キーの入替え
 nnoremap ; :
