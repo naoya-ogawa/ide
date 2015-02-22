@@ -17,7 +17,8 @@ nnoremap ; :
 nnoremap : ;
 
 "実行キーの切替
-nnoremap s :!
+"nnoremap s :!
+nnoremap s :!python pine_test.py
 
 "ウィンドウ移動
 nnoremap <space>w <c-w>w
@@ -26,6 +27,9 @@ nnoremap <space>k <c-w>k
 nnoremap <space>i <c-w>i
 nnoremap <space>l <c-w>l
 
+"タブ移動
+nnoremap <C-n> gt
+nnoremap <C-p> gT
 
 "Shift+2
 nnoremap " :VimFiler<CR>
@@ -142,6 +146,8 @@ endif
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'Yggdroot/indentLine'
 
 
 filetype plugin indent on
