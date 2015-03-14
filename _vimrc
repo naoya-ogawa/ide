@@ -145,9 +145,13 @@ endif
 
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
+"NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-scripts/JavaScript-Indent'
+
+NeoBundle 'tpope/vim-fugitive'
+
+
 
 filetype plugin indent on
